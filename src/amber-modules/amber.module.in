@@ -1,0 +1,26 @@
+#%Module1.0
+##
+## amber modulefile
+##
+## modulefiles/
+##
+proc ModulesHelp { } {
+        global amberversion 
+
+        puts stderr "\tGaMD patched Amber Tools from /opt/amberGaMD/@COMPILERNAME@/@ROLLNETWORK@"
+        puts stderr "\tAmber Toolkit Version $amberversion\n"
+}
+
+module-whatis   "GaMD patched Amber Toolkit Version @VERSION@"
+module-whatis   "Compiled with @COMPILERNAME@ compiler"
+
+# for Tcl script use only
+set     amberversion @VERSION@
+
+set amberHome /opt/amberGaMD/@COMPILERNAME@/@ROLLNETWORK@
+setenv AMBERHOME $amberHome
+prepend-path PATH $amberHome/bin
+prepend-path LD_LIBRARY_PATH $amberHome/lib
+prepend-path MANPATH $amberHome/share/man
+
+module load @PREREQMODULES@

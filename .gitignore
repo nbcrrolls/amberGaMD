@@ -1,0 +1,25 @@
+# build directory
+RPMS/
+SOURCES/
+BUILD/
+SPECS/
+disk*/
+*.iso
+
+_os
+_arch
+_distribution
+.rpmmacros
+
+# ignore version, rules  files
+Rules-*.mk
+Rules.mk
+Rolls.mk
+roll*.mk
+rocks-*.mk
+
+# ignore protected src files
+src/amber/*bz2
+src/amber/*tgz
+src/amber/amber14_GaMD_patch*
+

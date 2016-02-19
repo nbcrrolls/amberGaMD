@@ -1,0 +1,31 @@
+
+ifndef ROLLCOMPILER
+  ROLLCOMPILER = gnu
+endif
+COMPILERNAME := $(firstword $(subst /, ,$(ROLLCOMPILER)))
+
+ifndef ROLLNETWORK
+  ROLLNETWORK = eth
+endif
+
+NAME	    = amberGaMD-$(COMPILERNAME)-$(ROLLNETWORK)
+VERSION	    = 14
+RELEASE	    = 1
+SUFFIX      = tar.bz2
+
+SOURCE_NAME = Amber
+SOURCE_PKG  = $(SOURCE_NAME)$(VERSION).$(SUFFIX)
+SOURCE_DIR  = amber14
+
+TOOLS_NAME  = AmberTools
+TOOLSVERSION = 15
+TOOLS_PKG   = $(TOOLS_NAME)$(TOOLSVERSION).$(SUFFIX)
+TOOLS_DIR   = $(TOOLS_PKG:%.$(SUFFIX)=%)
+
+GAMDUPDATES = amber14-gamd-updates-20160104
+TARBALL_POSTFIX  = tgz
+
+PKGROOT     = /opt/amberGaMD/$(COMPILERNAME)/$(ROLLNETWORK)
+CUDAHOME    = /opt/cuda
+
+RPM.EXTRAS = AutoReq:No

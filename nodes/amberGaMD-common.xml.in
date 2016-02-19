@@ -1,0 +1,24 @@
+<?xml version="1.0" standalone="no"?>
+
+<kickstart>
+
+	<description>
+	AMBER Molecular Dynamics 
+	http://ambermd.org
+	</description>
+
+	<copyright>
+	Copyright (c) 2000 - 2014 The Regents of the University of California.
+	All rights reserved. Rocks(r) 6.2 www.rocksclusters.org
+	</copyright>
+
+	<changelog>
+	</changelog>
+
+	<package>amberGaMD-ROLLCOMPILER-ROLLNETWORK</package>
+	<package>amberGaMD-module-ROLLCOMPILER-ROLLNETWORK</package>
+
+<post>
+</post>
+
+</kickstart>
